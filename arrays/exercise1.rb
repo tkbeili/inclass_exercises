@@ -22,4 +22,10 @@ def give_my_greater_than_ten(array= [])
   array.select {|x| x.is_a?(Numeric) && x > 10 }
 end
 
+
+# Solution 3
+def give_my_greater_than_ten(array= [])
+  array.dup.delete_if {|x| !x.is_a?(Numeric) || x <= 10 }
+end
+
 give_my_greater_than_ten(my_array)
