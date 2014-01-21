@@ -2,6 +2,17 @@
 # returns another array with all elements that are greater 10 and 
 # doesn’t fail if you pass in non-numbers
 
-[1, 2, 4, 11, 14, 'asdf', false, nil]
+my_array = [1, 2, 4, 11, 14, 'asdf', false, nil]
 
-def give_my_greater_than_ten
+# Solution 1
+def give_my_greater_than_ten(array= [])
+  new_array = []
+  array.each do |x|
+    if x.is_a?(Numeric) && x > 10
+      new_array << x
+    end
+  end
+  new_array
+end
+
+give_my_greater_than_ten(my_array)
