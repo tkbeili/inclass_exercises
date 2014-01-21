@@ -16,3 +16,10 @@ def give_my_greater_than_ten(array= [])
 end
 
 give_my_greater_than_ten(my_array)
+
+# Solution 2
+def give_my_greater_than_ten(array= [])
+  array.select {|x| x.is_a?(Numeric) && x > 10 }
+end
+
+give_my_greater_than_ten(my_array)
